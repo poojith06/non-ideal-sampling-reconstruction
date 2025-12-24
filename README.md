@@ -41,7 +41,7 @@ For the above non-ideal sampling scenario, the objective is to:
 
 ---
 
-## Methodology
+## Proposed Reconstruction Method
 
 For band-limited signals, ideal reconstruction is governed by sinc interpolation:
 
@@ -73,7 +73,7 @@ All signals satisfy the Nyquist sampling criterion.
 
 ---
 
-## Performance Metric
+## Performance Evaluation
 
 Reconstruction accuracy is quantified using the **Mean Squared Error (MSE)**:
 
