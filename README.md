@@ -18,7 +18,7 @@ x[n] = x(nTs)
 
 ### Non-Ideal Sampling Scenario: Sampling-Time Jitter
 
-In this scenario, the (n)-th sample is not taken exactly at time ( nTs ), but at a perturbed time instant due to sampling-time jitter. The observed samples are:
+In this scenario, the n-th sample is not taken exactly at time ( nTs ), but at a perturbed time instant due to sampling-time jitter. The observed samples are:
 
 x_hat[n] = x(n·Ts + k_n·Δ)
 
@@ -34,7 +34,7 @@ The deviation k_n·Δ is known, but varies randomly across samples.
 
 For the above non-ideal sampling scenario, the objective is to:
 
-- Develop a method to estimate the ideal samples \( x[n] \) from the jittered samples \( \hat{x}[n] \),
+- Develop a method to estimate the ideal uniform samples x[n] from the jittered samples x_hat[n],
 - Justify the proposed method through analysis,
 - Demonstrate the reconstruction using **at least three distinct band-limited signals**,
 - Quantify the reconstruction performance as a function of the jitter bound \( K \).
@@ -89,11 +89,7 @@ The experimental results include:
 
 - Reconstruction of three band-limited signals from jittered samples
 - Mean Squared Error as a function of jitter level \( K \)
-
-Key observations:
 - Accurate reconstruction is achieved for small jitter levels
-- Reconstruction error increases monotonically with increasing \( K \)
-- The results are consistent with theoretical expectations
 
 ---
 
