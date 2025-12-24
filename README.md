@@ -12,15 +12,13 @@ This project develops and evaluates reconstruction techniques for band-limited s
 
 We are familiar with the Nyquist sampling criterion for band-limited signals and their perfect reconstruction under ideal conditions. In this problem, we address complexities that arise due to **non-ideal sampling conditions** which may occur in practice.
 
-Let the signal of interest be a continuous-time band-limited signal \( x(t) \), sampled above the Nyquist rate with sampling interval \( T_s \). The ideal discrete-time samples are given by:
+Let the signal of interest be a continuous-time band-limited signal ( x(t) ), sampled above the Nyquist rate with sampling interval ( Ts ). The ideal discrete-time samples are given by:
 
-\[
-x[n] = x(nT_s)
-\]
+x[n] = x(nTs)
 
 ### Non-Ideal Sampling Scenario: Sampling-Time Jitter
 
-In this scenario, the \(n\)-th sample is not taken exactly at time \( nT_s \), but at a perturbed time instant due to sampling-time jitter. The observed samples are:
+In this scenario, the (n)-th sample is not taken exactly at time ( nTs ), but at a perturbed time instant due to sampling-time jitter. The observed samples are:
 
 x_hat[n] = x(n·Ts + k_n·Δ)
 
