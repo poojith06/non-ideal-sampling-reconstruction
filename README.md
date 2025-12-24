@@ -87,9 +87,7 @@ All signals satisfy the Nyquist sampling criterion.
 
 Reconstruction accuracy is quantified using the **Mean Squared Error (MSE)**:
 
-\[
-\text{MSE} = \frac{1}{N}\sum_{n=0}^{N-1}\left(x[n] - \hat{x}_{\text{est}}[n]\right)^2
-\]
+MSE = (1 / N) * Σ_{n=0}^{N−1} [ x[n] − x_est[n] ]²
 
 The MSE is evaluated as a function of the jitter bound \( K \).
 
