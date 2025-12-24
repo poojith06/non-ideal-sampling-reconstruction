@@ -45,25 +45,19 @@ For the above non-ideal sampling scenario, the objective is to:
 
 For band-limited signals, ideal reconstruction is governed by sinc interpolation:
 
-\[
-x(t) = \sum_{m=-\infty}^{\infty} x[m] \, \text{sinc}\left(\frac{t}{T_s} - m\right)
-\]
+x(t) = sum_{m = −∞}^{∞} x[m] · sinc(t / Ts − m)
 
-Evaluating this expression at jittered sampling instants leads to a linear relationship between jittered samples and ideal samples:
+Due to sampling-time jitter, samples are obtained at perturbed time instants. Evaluating the sinc interpolation formula at these jittered instants leads to a linear relationship between the jittered samples and the ideal uniform samples:
 
-\[
-\hat{\mathbf{x}} = \mathbf{H}\mathbf{x}
-\]
+x_hat = H · x
 
-where the matrix \( \mathbf{H} \) contains sinc-based weights determined by the known sampling-time deviations.
+Here, x_hat represents the vector of jittered samples, x represents the vector of ideal uniform samples, and H is a matrix whose elements are sinc-based weights determined by the known sampling-time deviations. Each entry of H captures the contribution of an ideal sample to a jittered sample based on the corresponding timing offset.
 
-To recover the ideal samples, the inverse problem is solved using a least-squares approach:
+To recover the ideal samples from the jittered measurements, the resulting inverse problem is solved using a inverse of the matrix H:
 
-\[
-\hat{\mathbf{x}}_{\text{est}} = \mathbf{H}^{\dagger}\hat{\mathbf{x}}
-\]
+x_est = H† · x_hat
 
-where \( \mathbf{H}^{\dagger} \) denotes the Moore–Penrose pseudo-inverse.
+where H† denotes the pseudo-inverse of the matrix H. This approach compensates for the sample coupling introduced by sampling-time jitter and provides an estimate of the original uniform samples.
 
 ---
 
