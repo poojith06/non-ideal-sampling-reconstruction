@@ -22,17 +22,15 @@ x[n] = x(nT_s)
 
 In this scenario, the \(n\)-th sample is not taken exactly at time \( nT_s \), but at a perturbed time instant due to sampling-time jitter. The observed samples are:
 
-\[
-\hat{x}[n] = x(nT_s + k_n \Delta)
-\]
+x_hat[n] = x(n·Ts + k_n·Δ)
 
 where:
-- \( \Delta = \frac{T_s}{10} \),
-- \( k_n \) is an integer-valued random variable,
-- \( k_n \) is equally likely to take any integer value in the range \([-K, K]\),
-- \( 1 \leq K \leq 4 \).
+- Δ = Ts / 10
+- k_n is an integer-valued random variable
+- k_n is equally likely to take any integer value in the range [−K, K]
+- 1 ≤ K ≤ 4
 
-The deviation \( k_n \Delta \) is **known**, but varies randomly across samples.
+The deviation k_n·Δ is known, but varies randomly across samples.
 
 ### Objective
 
