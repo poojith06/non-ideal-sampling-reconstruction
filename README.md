@@ -104,4 +104,6 @@ The experimental results include:
 ## Conclusion
 
 This project demonstrates that sampling-time jitter can be effectively compensated when the jitter is known. By modeling jitter-induced distortions using sinc interpolation and solving the resulting inverse problem, accurate reconstruction of band-limited signals is achievable. The study also highlights the degradation in reconstruction performance as jitter magnitude increases.
+
+
 ---
